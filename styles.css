@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
+
+:root{
+    --netflix-red: #e50914;
+}
+
+*{  
+    margin: 0;
+    padding: 0;
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 500;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HERO SECTION */
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), 
+    url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 30px 148px 40px 148px ;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav img{
+    filter: invert(11%) sepia(91%) saturate(6288%) hue-rotate(352deg) brightness(89%) contrast(106%);
+    width: 145px;
+    height: auto;
+}
+.nav button{
+    padding: 8px 16px;
+    background-color: var(--netflix-red);
+    border: none;
+    border-radius: 4px;
+}
+
+.content{
+    justify-items: center;
+}
+.head-text{
+    margin-bottom: 16px;
+    justify-items: center;
+}
+.head-text h1{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 56px;
+}
+.head-text p{
+    font-size: 20px;
+}
+
+.form-container{
+    width: 588px;
+    justify-items: center;
+}
+.form-container h3{
+    margin-bottom: 16px;
+}
+
+.form-container form{
+    display: flex;
+}
+.form-container h3{
+    font-size: 16px;
+    font-weight: 200;
+}
+form{
+    height: 52px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+form button{
+    width: 190px;
+    height: 100%;
+    font-size: 22px;
+    padding: 8px 16px;
+    background-color: var(--netflix-red);
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5); 
+    background-color: rgba(58, 58, 58, 0.212);
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+form input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+main{
+    margin-top: 32px;
+    padding: 0 148px;
+}
+
+
+/* SHOW SECTION */
+.shows{
+    display: flex;
+    flex-direction: column;
+}
+.shows h2{
+    margin-bottom: 12px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.shows{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.show-card{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 10px;
+    width: max-content;
+    animation: infinite-scroll 20s linear infinite;
+}
+
+.show-card li{
+    position: relative;
+    border-radius: 14px;
+    flex-shrink: 0;
+    width: 180px;
+    height: 252px;
+    margin-right: 60px;
+}
+
+.show-num{
+    z-index: 10;
+    position: absolute;
+    color: black;
+    font-size: 100px;
+    font-weight: 900;
+    bottom:0;
+    left:-30px;
+    -webkit-text-stroke: 2px white;
+}
+
+#show1{
+    background-image: url(assets/movie1.webp);
+}
+#show2{
+    background-image: url(assets/movie2.webp);
+}
+
+#show3{
+    background-image: url(assets/movie3.webp);
+}
+
+#show4{
+    background-image: url(assets/movie4.webp);
+}
+
+#show5{
+    background-image: url(assets/movie5.webp);
+}
+
+#show6{
+    background-image: url(assets/movie6.webp);
+}
+
+#show7{
+    background-image: url(assets/movie7.webp);
+}
+
+/* INFINEITE SCROLL ON SHOW CARS ANIMATION */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Moves the list left by exactly 50% (one full set of items) */
+    transform: translateX(-50%);
+  }
+}
+
+.reasons-to-join{
+    margin-top: 70px;
+}
+.reasons-to-join h2{
+    margin-bottom: 12px;
+}
+.reasons-to-join ul h3{
+    font-size: 24px;
+}
+.reasons-to-join ul p{
+    font-size: 16px;
+    color:rgb(87, 87, 87)
+}
+
+
+.reason-cards{
+    display: flex;
+    gap: 20px;
+}
+
+.reason-cards li{
+    background: radial-gradient(
+    50% 100% at 50% 100%, 
+    rgba(33, 38, 77, 1) 0%, 
+    rgba(25, 17, 33, 1) 100%
+  );
+    border-radius: 14px;
+    height: 318px;
+    width: 250px;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.reason-cards li img{
+    align-self: flex-end;
+    width: 94px;
+    height: auto;
+}
+
+/* FAQ SECTION */
+.faq{
+    margin-top: 70px;
+}
+.faq h2{
+    margin-bottom: 12px;
+}
+.faq summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 24px;
+    width: 100%;
+    background-color: rgb(45, 45, 45);
+    margin-bottom: 8px;
+}
+
+.faq summary:hover{
+    background-color: rgb(63, 63, 63);
+}
+
+.faq summary:hover span{
+    background-color: rgb(63, 63, 63);
+}
+
+.faq summary h3{
+    font-weight: 300;
+}
+.faq summary span{
+    background-color: rgb(45, 45, 45);
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.faq details p {
+  background-color: rgb(45, 45, 45);
+  padding: 0 24px 24px 64px;
+  padding: 24px; 
+  margin-top: -7px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  word-break: break-word; 
+}
+
+/* LAPTOP */
+@media (max-width: 1024px) {
+  .faq {
+    margin-top: 60px;
+  }
+  .faq h2 {
+    font-size: 1.75rem;
+  }
+  .faq summary {
+    font-size: 1.35rem;
+    padding: 22px;
+  }
+  .faq .toggle-icon {
+    font-size: 32px;
+  }
+  .faq details p {
+    font-size: 1.15rem;
+    padding: 22px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .faq {
+    margin-top: 50px;
+  }
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+  .faq summary {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+  .faq .toggle-icon {
+    font-size: 28px;
+  }
+  .faq details p {
+    font-size: 1.05rem;
+    padding: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .faq {
+    margin-top: 40px;
+  }
+  .faq h2 {
+    font-size: 1.35rem;
+  }
+  .faq summary {
+    font-size: 1.05rem;
+    padding: 16px 20px;
+  }
+  .faq .toggle-icon {
+    font-size: 24px;
+  }
+  .faq details p {
+    font-size: 0.95rem;
+    padding: 16px 20px;
+  }
+}
+
+
+/* SECOND FORM */
+.form-container{
+    margin: 70px 0;
+    justify-self: center;
+}
+
+form input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* FOOTER SECTION */
+footer {
+  padding: 0 148px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer p, footer span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 16px 0;
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer-links li:hover {
+  font-size: 14px;
+  color: var(--netflix-red);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.drop-down {
+  margin: 20px 0;
+}
+
+.drop-down select {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.n-sa {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.captcha {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+}
+
+
+
